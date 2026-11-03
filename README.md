@@ -21,8 +21,8 @@ corepack prepare pnpm@11.21.0 --activate
 ### Install
 
 ```bash
-git clone https://github.com/AnanyaNavale/ody-assessment
-cd ody-assessment
+git clone https://github.com/AnanyaNavale/Mise
+cd Mise
 pnpm install
 ```
 
