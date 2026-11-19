@@ -3,8 +3,8 @@ import {
   useGetSettings,
   type DashboardStats,
   type PopularItem,
-} from "@ody/api-client";
-import { fonts, palette } from "@ody/shared";
+} from "@mise/api-client";
+import { fonts, palette } from "@mise/shared";
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import { useRef, type ReactNode } from "react";

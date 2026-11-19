@@ -15,12 +15,12 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      "@ody/shared": ["packages/shared/src"],
-      "@ody/shared/*": ["packages/shared/src/*"],
-      "@ody/types": ["packages/types/src"],
-      "@ody/types/*": ["packages/types/src/*"],
-      "@ody/api-client": ["packages/api-client/src"],
-      "@ody/api-client/*": ["packages/api-client/src/*"]
+      "@mise/shared": ["packages/shared/src"],
+      "@mise/shared/*": ["packages/shared/src/*"],
+      "@mise/types": ["packages/types/src"],
+      "@mise/types/*": ["packages/types/src/*"],
+      "@mise/api-client": ["packages/api-client/src"],
+      "@mise/api-client/*": ["packages/api-client/src/*"]
     }
   }
 }

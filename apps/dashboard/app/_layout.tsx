@@ -1,4 +1,4 @@
-import { AXIOS_INSTANCE } from "@ody/api-client";
+import { AXIOS_INSTANCE } from "@mise/api-client";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
@@ -11,7 +11,7 @@ function useHideWebFocusOutline() {
       return;
     }
 
-    const styleId = "ody-hide-focus-outline";
+    const styleId = "mise-hide-focus-outline";
     if (document.getElementById(styleId)) {
       return;
     }

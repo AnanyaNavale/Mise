@@ -26,7 +26,7 @@ cd Mise
 pnpm install
 ```
 
-Internal packages (`@ody/shared`, `@ody/types`, `@ody/api-client`) are consumed from TypeScript source via workspace path aliases, not from a built `dist/` folder.
+Internal packages (`@mise/shared`, `@mise/types`, `@mise/api-client`) are consumed from TypeScript source via workspace path aliases, not from a built `dist/` folder.
 
 ### Database (Neon)
 
@@ -78,7 +78,7 @@ The Expo web dashboard runs on **http://localhost:8081**. It calls `http://local
 Optional: regenerate the typed client after backend contract changes:
 
 ```bash
-pnpm --filter @ody/backend generate:openapi
+pnpm --filter @mise/backend generate:openapi
 pnpm gen:contract
 ```
 
@@ -86,7 +86,7 @@ pnpm gen:contract
 pnpm test
 ```
 
-Runs backend Vitest (`@ody/backend`) and dashboard Jest (`@ody/dashboard`).
+Runs backend Vitest (`@mise/backend`) and dashboard Jest (`@mise/dashboard`).
 
 ## Architecture decisions
 
@@ -95,7 +95,7 @@ The API contract is the bridge between the database and the UI, so types stay al
 1. **Drizzle schema** in `services/backend/src/db/schema.ts` defines Postgres tables and TypeScript models. `drizzle-zod` (`createInsertSchema` / `createSelectSchema`) is generated from that schema.
 2. **Order HTTP schemas** in `services/backend/src/order-schemas.ts` extend those drizzle-zod models for create-order and status-update OpenAPI routes (omit server-owned fields, add line items and examples).
 3. **Hono + Zod** routes validate request bodies, params, and responses (`@hono/zod-openapi`).
-4. An **OpenAPI spec** is generated from those routes (`pnpm --filter @ody/backend generate:openapi` → `packages/api-client/openapi.json`).
+4. An **OpenAPI spec** is generated from those routes (`pnpm --filter @mise/backend generate:openapi` → `packages/api-client/openapi.json`).
 5. **Orval** turns that spec into Axios + **React Query** hooks (`pnpm gen:contract`).
 6. The dashboard imports those hooks (`useGetOrders`, `useUpdateOrderStatus`, and so on) for typed fetches and mutations.
 
@@ -109,7 +109,7 @@ Order status is not a free-form client field. The backend enforces a state machi
 - Order lifecycle: list and detail actions only allow the next valid status (or cancel while the order is open).
 - Kitchen closed: Settings `serviceAvailable` toggle. Auto-accept is forced off when closed; Create Order is disabled; `POST /api/orders` is rejected.
 - Settings Save stays disabled until the form is dirty. Hours are a single open/close pair.
-- Design tokens (`palette`, `colorScales`, `statusColors`, type) live in `@ody/shared` and are used across screens instead of local color objects.
+- Design tokens (`palette`, `colorScales`, `statusColors`, type) live in `@mise/shared` and are used across screens instead of local color objects.
 - `/design-system` route (accessible from Settings or directly at `http://localhost:8081/design-system`) documents the tokens...
 - Tests: backend Vitest for create-order rules (unavailable items, totals, kitchen closed) and status transitions; dashboard Jest for Create Order enablement, status helpers, and settings dirty/validation.
 
@@ -126,11 +126,11 @@ Order status is not a free-form client field. The backend enforces a state machi
 
 | Workspace | Package | Role |
 | --- | --- | --- |
-| `apps/dashboard` | `@ody/dashboard` | Operator dashboard (Home, Orders, Menu, Customers, Settings, `/design-system`) |
-| `services/backend` | `@ody/backend` | REST API, validation, order rules |
-| `packages/shared` | `@ody/shared` | Design tokens and shared primitives |
-| `packages/types` | `@ody/types` | Shared TypeScript types |
-| `packages/api-client` | `@ody/api-client` | Generated OpenAPI client |
+| `apps/dashboard` | `@mise/dashboard` | Operator dashboard (Home, Orders, Menu, Customers, Settings, `/design-system`) |
+| `services/backend` | `@mise/backend` | REST API, validation, order rules |
+| `packages/shared` | `@mise/shared` | Design tokens and shared primitives |
+| `packages/types` | `@mise/types` | Shared TypeScript types |
+| `packages/api-client` | `@mise/api-client` | Generated OpenAPI client |
 
 ## Tradeoffs and incomplete areas
 
@@ -152,15 +152,15 @@ Run from the repository root unless noted.
 | `pnpm lint` | ESLint across the workspace |
 | `pnpm typecheck` | TypeScript checks via Turborepo |
 | `pnpm test` | Backend Vitest + dashboard Jest suites |
-| `pnpm --filter @ody/backend db:push` | Push Drizzle schema to Neon |
-| `pnpm --filter @ody/backend db:seed` | Seed restaurant, menu, customers, and orders |
-| `pnpm --filter @ody/backend db:studio` | Open Drizzle Studio |
+| `pnpm --filter @mise/backend db:push` | Push Drizzle schema to Neon |
+| `pnpm --filter @mise/backend db:seed` | Seed restaurant, menu, customers, and orders |
+| `pnpm --filter @mise/backend db:studio` | Open Drizzle Studio |
 
 Package-level equivalents:
 
 ```bash
-pnpm --filter @ody/dashboard dev
-pnpm --filter @ody/backend dev
+pnpm --filter @mise/dashboard dev
+pnpm --filter @mise/backend dev
 cd services/backend && pnpm db:push && pnpm db:seed
 ```
 

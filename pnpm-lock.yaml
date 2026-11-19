@@ -38,13 +38,13 @@ importers:
       '@expo/vector-icons':
         specifier: 14.1.0
         version: 14.1.0(expo-font@13.3.2(expo@53.0.27)(react@19.0.0))(react-native@0.79.2(@babel/core@7.29.7(supports-color@10.2.2))(@types/react@19.0.14)(react@19.0.0)(supports-color@10.2.2))(react@19.0.0)
-      '@ody/api-client':
+      '@mise/api-client':
         specifier: workspace:*
         version: link:../../packages/api-client
-      '@ody/shared':
+      '@mise/shared':
         specifier: workspace:*
         version: link:../../packages/shared
-      '@ody/types':
+      '@mise/types':
         specifier: workspace:*
         version: link:../../packages/types
       '@tanstack/react-query':
@@ -169,7 +169,7 @@ importers:
       '@neondatabase/serverless':
         specifier: ^1.1.0
         version: 1.1.0
-      '@ody/types':
+      '@mise/types':
         specifier: workspace:*
         version: link:../../packages/types
       drizzle-orm:

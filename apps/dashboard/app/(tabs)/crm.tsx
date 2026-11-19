@@ -2,8 +2,8 @@ import {
   useGetCustomers,
   useGetSettings,
   type CustomerListItem,
-} from "@ody/api-client";
-import { fonts, palette } from "@ody/shared";
+} from "@mise/api-client";
+import { fonts, palette } from "@mise/shared";
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import { useMemo, useState, type ReactNode } from "react";

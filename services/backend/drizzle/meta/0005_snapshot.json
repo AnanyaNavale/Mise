@@ -505,7 +505,7 @@
           "type": "text",
           "primaryKey": false,
           "notNull": true,
-          "default": "'Ody Restaurant'"
+          "default": "'Mise Restaurant'"
         },
         "prep_time_minutes": {
           "name": "prep_time_minutes",

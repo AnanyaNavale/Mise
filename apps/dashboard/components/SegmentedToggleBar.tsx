@@ -1,4 +1,4 @@
-import { palette } from "@ody/shared";
+import { palette } from "@mise/shared";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import {
   Animated,

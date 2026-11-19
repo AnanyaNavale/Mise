@@ -11,8 +11,8 @@ import {
   type GetOrdersStatus,
   type OrderWithDetails,
   type UpdateOrderStatusStatus,
-} from "@ody/api-client";
-import { fonts, palette } from "@ody/shared";
+} from "@mise/api-client";
+import { fonts, palette } from "@mise/shared";
 import { CreateOrderButton } from "../../components/CreateOrderButton";
 import { CreateOrderModal } from "../../components/CreateOrderModal";
 import { nextStatusFor } from "../../lib/order-status";

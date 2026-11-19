@@ -10,7 +10,7 @@ import {
   spacing,
   statusColors,
   typography,
-} from "@ody/shared";
+} from "@mise/shared";
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import { useState, type ComponentProps, type ReactNode } from "react";
@@ -146,7 +146,7 @@ export default function DesignSystemScreen() {
           and Settings.
         </Text>
 
-        <Section title="Color tokens" subtitle="Scales plus the semantic palette live screens import from @ody/shared">
+        <Section title="Color tokens" subtitle="Scales plus the semantic palette live screens import from @mise/shared">
           {(Object.keys(colorScales) as Array<keyof typeof colorScales>).map((name) => (
             <View key={name} style={{ gap: 8, marginBottom: 12 }}>
               <Text style={{ ...sans, fontFamily: fonts.sansSemiBold, fontSize: 13, textTransform: "capitalize" }}>
@@ -173,7 +173,7 @@ export default function DesignSystemScreen() {
             Semantic palette
           </Text>
           <Text style={{ ...sans, fontSize: 12, color: palette.dim, marginBottom: 8 }}>
-            `palette` from @ody/shared — Home, Orders, Menu, Customers, and Settings use these names.
+            `palette` from @mise/shared — Home, Orders, Menu, Customers, and Settings use these names.
           </Text>
           <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 10 }}>
             {(

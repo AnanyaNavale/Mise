@@ -2,8 +2,8 @@ import {
   getGetSettingsQueryKey,
   useGetSettings,
   useUpdateSettings,
-} from "@ody/api-client";
-import { fonts, palette } from "@ody/shared";
+} from "@mise/api-client";
+import { fonts, palette } from "@mise/shared";
 import { Ionicons } from "@expo/vector-icons";
 import { useQueryClient } from "@tanstack/react-query";
 import { useRouter, type Href } from "expo-router";

@@ -6,8 +6,8 @@ import {
   useGetSettings,
   useUpdateOrderStatus,
   type UpdateOrderStatusStatus,
-} from "@ody/api-client";
-import { fonts, palette, statusColors } from "@ody/shared";
+} from "@mise/api-client";
+import { fonts, palette, statusColors } from "@mise/shared";
 import { Ionicons } from "@expo/vector-icons";
 import { useQueryClient } from "@tanstack/react-query";
 import { useLocalSearchParams, useRouter, type Href } from "expo-router";

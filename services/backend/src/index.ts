@@ -375,7 +375,7 @@ const UpdateRestaurantSettingsSchema = z
 
 const DEFAULT_RESTAURANT_SETTINGS = {
   id: "00000000-0000-0000-0000-000000000000",
-  restaurantName: "Ody Restaurant",
+  restaurantName: "Mise Restaurant",
   prepTimeMinutes: 15,
   autoAcceptOrders: true,
   serviceAvailable: true,
@@ -1998,7 +1998,7 @@ app.openapi(updateSettingsRoute, async (c) => {
     const [created] = await db
       .insert(restaurantSettings)
       .values({
-        restaurantName: body.restaurantName ?? "Ody Restaurant",
+        restaurantName: body.restaurantName ?? "Mise Restaurant",
         prepTimeMinutes: body.prepTimeMinutes ?? 15,
         autoAcceptOrders,
         serviceAvailable,
@@ -2042,7 +2042,7 @@ app.openapi(updateSettingsRoute, async (c) => {
 export const openAPIConfig = {
   openapi: "3.0.0" as const,
   info: {
-    title: "Ody Restaurant API",
+    title: "Mise Restaurant API",
     version: "1.0.0",
   },
 };

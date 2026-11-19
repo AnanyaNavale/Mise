@@ -1,5 +1,5 @@
 {
-  "name": "ody",
+  "name": "mise",
   "private": true,
   "type": "module",
   "packageManager": "pnpm@11.21.0",
@@ -7,13 +7,13 @@
     "node": ">=24.0.0"
   },
   "scripts": {
-    "dev:dashboard": "turbo run dev --filter=@ody/dashboard",
-    "dev:backend": "turbo run dev --filter=@ody/backend",
+    "dev:dashboard": "turbo run dev --filter=@mise/dashboard",
+    "dev:backend": "turbo run dev --filter=@mise/backend",
     "gen:api": "orval --config orval.config.ts",
     "gen:contract": "orval --config orval.config.ts",
     "lint": "eslint .",
     "typecheck": "turbo run typecheck",
-    "test": "turbo run test --filter=@ody/backend --filter=@ody/dashboard"
+    "test": "turbo run test --filter=@mise/backend --filter=@mise/dashboard"
   },
   "devDependencies": {
     "@eslint/js": "^9.18.0",

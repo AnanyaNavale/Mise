@@ -1,4 +1,4 @@
-import { fonts, palette } from "@ody/shared";
+import { fonts, palette } from "@mise/shared";
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 import type { ComponentProps } from "react";

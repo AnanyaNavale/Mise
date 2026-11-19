@@ -1,4 +1,4 @@
-name = "ody-backend"
+name = "mise-backend"
 compatibility_date = "2025-01-29"
 main = "src/index.ts"
 

@@ -4,8 +4,8 @@ import {
   useGetOrders,
   useGetSettings,
   type OrderWithDetails,
-} from "@ody/api-client";
-import { fonts, palette, statusColors } from "@ody/shared";
+} from "@mise/api-client";
+import { fonts, palette, statusColors } from "@mise/shared";
 import { Ionicons } from "@expo/vector-icons";
 import { useLocalSearchParams, useRouter, type Href } from "expo-router";
 import { useMemo, useState, type ComponentProps } from "react";

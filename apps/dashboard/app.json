@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "Ody Dashboard",
-    "slug": "ody-dashboard",
+    "name": "Mise Dashboard",
+    "slug": "mise-dashboard",
     "version": "1.0.0",
-    "scheme": "ody",
+    "scheme": "mise",
     "orientation": "default",
     "userInterfaceStyle": "automatic",
     "platforms": ["ios", "android", "web"],

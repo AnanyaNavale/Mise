@@ -1,5 +1,5 @@
 {
-  "name": "@ody/dashboard",
+  "name": "@mise/dashboard",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -18,9 +18,9 @@
   "dependencies": {
     "@expo/metro-runtime": "~5.0.5",
     "@expo/vector-icons": "14.1.0",
-    "@ody/api-client": "workspace:*",
-    "@ody/shared": "workspace:*",
-    "@ody/types": "workspace:*",
+    "@mise/api-client": "workspace:*",
+    "@mise/shared": "workspace:*",
+    "@mise/types": "workspace:*",
     "@tanstack/react-query": "^5.64.2",
     "expo": "~53.0.0",
     "expo-constants": "~17.1.8",

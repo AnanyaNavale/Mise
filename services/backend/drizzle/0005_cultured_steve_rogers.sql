@@ -1,1 +1,1 @@
-ALTER TABLE "restaurant_settings" ADD COLUMN "restaurant_name" text DEFAULT 'Ody Restaurant' NOT NULL;
+ALTER TABLE "restaurant_settings" ADD COLUMN "restaurant_name" text DEFAULT 'Mise Restaurant' NOT NULL;

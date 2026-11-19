@@ -91,7 +91,7 @@ function operationName(
 }
 
 export default defineConfig({
-  ody: {
+  mise: {
     input: {
       target: "./packages/api-client/openapi.json",
     },
